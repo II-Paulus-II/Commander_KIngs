@@ -1,0 +1,15 @@
+
+Pain in the ass
+
+4. fix some succession modifiers -- 75% done
+
+
+fix
+
+character interactions
+
+add succession effect to on being born + on character death
+
+holdings for monarchies is wrong. 
+
+
