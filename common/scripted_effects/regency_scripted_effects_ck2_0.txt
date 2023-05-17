@@ -1,4 +1,30 @@
-﻿compensation_for_active_ideas_effect = {
+﻿get_my_ruler_effect = {
+	if = {
+		limit = {
+			any_character = {
+				is_co_ruler = yes
+				has_character_modifier = commander_king
+			}
+		}
+		random_character = {
+			limit = {
+				is_co_ruler = yes
+				has_character_modifier = commander_king
+			}
+			save_scope_as = the_true_ruler
+		}
+	}
+	else = {
+		random_character = {
+			limit = {
+				is_ruler = yes
+			}
+			save_scope_as = the_true_ruler
+		}
+	}
+}
+
+compensation_for_active_ideas_effect = {
 	if = {
 		limit = {
 			idea = idea_martial_ethos

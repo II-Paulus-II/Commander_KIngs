@@ -13,12 +13,14 @@ calculate_succession_events.1 = {
 		if = {
 			limit = {
 				any_character = {
+					is_co_ruler = yes
 					has_character_modifier = commander_king
 				}
 			}
 			
 			random_character = {
 				limit = {
+					is_co_ruler = yes
 					has_character_modifier = commander_king
 				}
 				save_scope_as = true_king
