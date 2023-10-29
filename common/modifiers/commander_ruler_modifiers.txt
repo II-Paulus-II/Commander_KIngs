@@ -1,0 +1,6 @@
+﻿ruler_is_a_commander = {
+	monthly_character_popularity = 0.25
+}
+ruler_in_command = {
+	land_morale = 0.50
+}
