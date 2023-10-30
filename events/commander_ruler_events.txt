@@ -30,9 +30,9 @@ commander_ruler_events.1 = {
       ordered_legion_unit = {
         limit = {
           legion = ROOT.capital_scope.governorship.legion
-          unit_size >= 1
         }
         max = 3
+        check_range_bounds = no
         order_by = unit_size
         if = {
           limit = {
@@ -61,9 +61,11 @@ commander_ruler_events.1 = {
       }
     }
 	}
-
+  option = { #changed my mind
+    name = "commander_ruler_events.1.a"
+  }
 	option = { # Ruler Becomes a Commander.
-		name = "commander_ruler_events.1.a"
+		name = "commander_ruler_events.1.b"
 		trigger = {
 			exists = scope:army_one
 		}
@@ -73,19 +75,19 @@ commander_ruler_events.1 = {
     scope:commander_ruler = {
       add_character_modifier = {
         name = ruler_is_a_commander
-        duration = -1
+        duration = 365
       }
     }
     scope:army_one = {
       add_unit_modifier = {
         name = ruler_in_command
-        duration = -1
+        duration = 365
       }
       set_as_commander = scope:commander_ruler
     }
 	}
 	option = { # Ruler Becomes a Commander.
-		name = "commander_ruler_events.1.b"
+		name = "commander_ruler_events.1.c"
 		trigger = {
 			exists = scope:army_two
 		}
@@ -96,19 +98,19 @@ commander_ruler_events.1 = {
     scope:commander_ruler = {
       add_character_modifier = {
         name = ruler_is_a_commander
-        duration = -1
+        duration = 365
       }
     }
     scope:army_two = {
       add_unit_modifier = {
         name = ruler_in_command
-        duration = -1
+        duration = 365
       }
       set_as_commander = scope:commander_ruler
     }
 	}
 	option = { # Ruler Becomes a Commander.
-		name = "commander_ruler_events.1.c"
+		name = "commander_ruler_events.1.d"
 		trigger = {
 			exists = scope:army_three
 		}
@@ -119,13 +121,13 @@ commander_ruler_events.1 = {
     scope:commander_ruler = {
       add_character_modifier = {
         name = ruler_is_a_commander
-        duration = -1
+        duration = 365
       }
     }
     scope:army_three = {
       add_unit_modifier = {
         name = ruler_in_command
-        duration = -1
+        duration = 365
       }
       set_as_commander = scope:commander_ruler
     }
@@ -150,9 +152,11 @@ commander_ruler_events.2 = {
       save_scope_as = commander_ruler
     }
   }
-
+  option = { #changed my mind
+    name = "commander_ruler_events.2.a"
+  }
 	option = { # Ruler Stops Being a Commander.
-		name = "commander_ruler_events.2.a"
+		name = "commander_ruler_events.2.b"
 		trigger = {
 			exists = scope:commander_ruler
 		}
