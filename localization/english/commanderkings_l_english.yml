@@ -16,4 +16,3 @@
  ruler_is_a_commander:0 "Commander King"
  ruler_in_command:0 "Army Commanded by Ruler"
  LEGION_LEGATUS_TITLE:0 "The Legate is [Character.GetName]. The [MilitaryView.GetPlayer.GetRulerTitle] may command a legion army by decision."
- LEGION_NOLEGATUS_TITLE:0 "No Legion Legate! The [MilitaryView.GetPlayer.GetRulerTitle] may command a legion army by decision."
