@@ -1401,34 +1401,17 @@ base_window = {
 								}
 								blockoverride "Title_text" {}
 							}
+
 							flowcontainer = {
-								position = { 7 32 }
-								datamodel = "[LegionGovernorshipItem.GetGovernorship.GetGovernorOrRuler]"
-								item = {
-									textbox = {
-										autoresize = yes
-										elide = right
-										fontsize_min = 14
-										max_width = 240
-										multiline = no
-										using = BaseFontM
-										using = Black_FontColor
-										
-										visible = "[Character.IsValid]"
-										text = "RULER_IN_COMMAND_TITLE"
-									}
-								}
-							}
-							flowcontainer = {
-								position = { 7 52 }
+								position = { 7 29 }
 								datamodel = "[LegionGovernorshipItem.GetGovernorship.GetLegion.GetCommanders]"
 								item = {
 									textbox = {
 										autoresize = yes
 										elide = right
-										fontsize_min = 14
-										max_width = 240
-										multiline = no
+										fontsize_min = 10
+										max_width = 290
+										multiline = yes
 										using = BaseFontM
 										using = Black_FontColor
 										visible = "[And( Character.IsLegate, Character.IsValid )]"
@@ -1437,9 +1420,9 @@ base_window = {
 								}
 							}
 							icon_and_text_dark = {
-								position = { 186 91 }
+								position = { 206 91 }
 								parentanchor = left|top
-								size = { 102 0 }
+								size = { 84 0 }
 								scale = 1
 								blockoverride "Text" { text = "[LegionGovernorshipItem.GetCohortsSize]/[LegionGovernorshipItem.GetMaximumSize]" }
 								blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/strength.dds" }
