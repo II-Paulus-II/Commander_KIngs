@@ -152,6 +152,7 @@ commander_ruler_events.2 = {
       save_scope_as = commander_ruler
     }
   }
+
   option = { #changed my mind
     name = "commander_ruler_events.2.a"
   }
@@ -174,4 +175,59 @@ commander_ruler_events.2 = {
 			}
     }
 	}
+}
+
+commander_ruler_events.3 = {
+	type = country_event
+	title = "commander_ruler_events.3.t"
+	desc = "commander_ruler_events.3.desc"
+	picture = elephant_battle
+
+	left_portrait = current_ruler
+	right_portrait = commander_co_ruler
+
+	immediate = {
+		random_character = {
+			limit = {
+				is_co_ruler = yes # Selects Current Co-Ruler.
+			}
+			save_scope_as = commander_co_ruler
+		}
+    random_unit = {
+      limit = {
+        is_army = yes
+        has_commander = yes
+        commander = {
+          is_ruler = yes
+        }
+      }
+      save_scope_as = army_one
+    }
+	}
+  option = { #changed my mind
+    name = "commander_ruler_events.3.a"
+  }
+	option = { # Ruler Becomes a Commander.
+		name = "commander_ruler_events.3.b"
+		trigger = {
+			exists = scope:army_one
+		}
+    set_variable = {
+      name = co_ruler_become_commander
+    } 
+    scope:commander_co_ruler = {
+      add_character_modifier = {
+        name = ruler_is_a_commander
+        duration = 365
+      }
+    }
+    scope:army_one = {
+      add_unit_modifier = {
+        name = ruler_in_command
+        duration = 365
+      }
+      set_as_commander = scope:commander_co_ruler
+    }
+	}
+
 }
