@@ -12,6 +12,7 @@
 		allow = {
 			current_ruler = {
 				is_male = yes
+				is_adult = yes
 			}
 		}
 		effect = {
@@ -46,9 +47,10 @@
 	}
 
 	#Co-Consul takes command of levy
-	become_co_commander = {
+	become_levy_commander = {
 		potential = {
 			num_of_cities >= 1 # Required number of cities to take the decision.
+			#has_co_ruler_government = yes
 		}
 		allow = {
 			current_ruler = {
