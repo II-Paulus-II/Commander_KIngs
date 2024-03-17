@@ -1,0 +1,5 @@
+﻿on_move_country = {
+    events = {
+        commander_ruler_events.6
+    }
+}

@@ -313,4 +313,25 @@ commander_ruler_events.5 = {
   }
 }
 
+commander_ruler_events.6 = {
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_variable = ruler_legion_commander
+			}
+      remove_variable = ruler_legion_commander
+      employer = {
+        trigger_event = {
+          id = commander_ruler_events.3
+          days = 1
+			}
+    }
+		}
+	}
+
+}
+
 
