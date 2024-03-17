@@ -17,3 +17,12 @@
  ruler_is_a_commander:0 "Commander King"
  ruler_in_command:0 "Army Commanded by Ruler"
  LEGION_LEGATUS_TITLE:0 "The Legate is [Character.GetName]. The [MilitaryView.GetPlayer.GetRulerTitle] may command a legion army by decision."
+ fix_command:0 "Reorganise Legion Command"
+ fix_command_desc:0 "These are dark days, you may need to take this decision to re-organise your legion's commanders."
+ commander_ruler_events.4.t:0 "debug"
+ commander_ruler_events.4.desc:0 "yeyeye"
+ commander_ruler_events.4.a:0 "yeyeye"
+ commander_ruler_events.5.t:0 "Reorganising Legion Command"
+ commander_ruler_events.5.desc:0 "[SCOPE.sChar('old_ruler').GetName] used to be great. Now they relinquish their command!"
+ commander_ruler_events.5.a:0 "See it done!"
+

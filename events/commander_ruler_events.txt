@@ -78,6 +78,18 @@ commander_ruler_events.1 = {
     scope:commander_ruler = {
       add_character_modifier = {
         name = ruler_is_a_commander
+        duration = 365
+      }
+      if = {
+        limit = {
+          NOT = {
+            has_variable = ruler_legion_commander
+          }
+        }
+        set_variable = {
+          name = ruler_legion_commander
+          value = ROOT
+        }
       }
     }
     scope:army_one = {
@@ -100,6 +112,18 @@ commander_ruler_events.1 = {
     scope:commander_ruler = {
       add_character_modifier = {
         name = ruler_is_a_commander
+        duration = 365
+      }
+      if = {
+        limit = {
+          NOT = {
+            has_variable = ruler_legion_commander
+          }
+        }
+        set_variable = {
+          name = ruler_legion_commander
+          value = ROOT
+        }
       }
     }
     scope:army_two = {
@@ -122,6 +146,18 @@ commander_ruler_events.1 = {
     scope:commander_ruler = {
       add_character_modifier = {
         name = ruler_is_a_commander
+        duration = 365
+      }
+      if = {
+        limit = {
+          NOT = {
+            has_variable = ruler_legion_commander
+          }
+        }
+        set_variable = {
+          name = ruler_legion_commander
+          value = ROOT
+        }
       }
     }
     scope:army_three = {
@@ -171,6 +207,7 @@ commander_ruler_events.2 = {
     scope:commander_ruler = { 
         remove_character_modifier = ruler_is_a_commander
         remove_command = yes
+        remove_variable = ruler_legion_commander
 			}
 		hidden_effect = {
 			remove_variable = ruler_become_commander
@@ -189,9 +226,17 @@ commander_ruler_events.3 = {
   hidden = yes
 
   immediate = {
-    trigger_event = {
-      id = commander_ruler_events.5
-      days = 1
+    if = {
+      limit = {
+        has_variable = ruler_become_commander
+      }
+      remove_variable = ruler_become_commander
+    }
+    random_unit = {
+      limit = { 
+        has_unit_modifier = ruler_in_command
+      }
+      remove_unit_modifier = ruler_in_command
     }
   }
 }
@@ -220,26 +265,47 @@ commander_ruler_events.4 = {
 
 commander_ruler_events.5 = {
   type = country_event
-  #hidden = yes
 	title = "commander_ruler_events.5.t"
 	desc = "commander_ruler_events.5.desc"
 	picture = throneroom
 
   immediate = {
-    if = {
-      limit = {
-        has_variable = ruler_become_commander
-      }
-      remove_variable = ruler_become_commander
-    }
-    scope:former_ruler = {
+    hidden_effect = {
       if = {
         limit = {
-          is_alive = yes
-          in_command = yes
+          has_variable = ruler_become_commander
         }
-        remove_command = yes
+        remove_variable = ruler_become_commander
       }
+    }
+    random_character = {
+      limit = {
+        in_command = yes
+        has_variable = ruler_legion_commander
+        is_ruler = no
+      }
+      save_scope_as = old_ruler
+    }
+    if = {
+      limit = { 
+        exists = scope:old_ruler
+      }
+      scope:old_ruler = {
+        remove_command = yes
+        remove_variable = ruler_legion_commander
+        if = {
+          limit = {
+            has_character_modifier = ruler_is_a_commander
+          }
+          remove_character_modifier = ruler_is_a_commander
+        }
+      }
+    }
+    random_unit = {
+      limit = { 
+        has_unit_modifier = ruler_in_command
+      }
+      remove_unit_modifier = ruler_in_command
     }
   }
 	option = {

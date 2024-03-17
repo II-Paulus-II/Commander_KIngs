@@ -1,5 +1,5 @@
 ﻿country_decisions = {
-# Become Commander
+	# Become Commander
 	become_commander = {
 		potential = {
 			num_of_cities >= 1 # Required number of cities to take the decision.
@@ -13,6 +13,7 @@
 			current_ruler = {
 				is_male = yes
 				is_adult = yes
+				
 			}
 		}
 		effect = {
@@ -25,15 +26,19 @@
 		}
 	}
 
-# Leave Command
+	# Leave Command - manually relinquish command before 12 months is up
 	leave_command = {
 		potential = {
 			num_of_cities >= 1 # Required number of cities to take the decision.
 			has_variable = ruler_become_commander 
+			any_character = {
+				has_variable = ruler_legion_commander
+				is_ruler = yes
+			}
 		}
 		allow = {
 			current_ruler = {
-				is_male = yes
+				is_alive = yes
 			}
 		}
 		effect = {
@@ -50,8 +55,7 @@
 		potential = {
 			num_of_cities >= 1 # Required number of cities to take the decision.
 			any_character = {
-				in_command = yes
-				has_character_modifier = ruler_is_a_commander
+				has_variable = ruler_legion_commander
 				is_ruler = no
 			}
 		}

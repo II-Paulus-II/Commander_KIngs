@@ -1,5 +1,9 @@
-﻿on_ruler_change = {
+﻿
+##Cleans up issues with taking command when ruler dies or election changes ruler. 
+
+on_ruler_change = {
     events = {
         commander_ruler_events.3
     }
 }
+
