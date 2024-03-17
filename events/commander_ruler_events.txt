@@ -196,7 +196,7 @@ commander_ruler_events.3 = {
 	left_portrait = current_ruler
 	right_portrait = current_co_ruler
 
-  triggger = {
+  trigger = {
     has_co_ruler_government = yes
   }
 
@@ -207,48 +207,54 @@ commander_ruler_events.3 = {
 			}
 			save_scope_as = commander_co_ruler
 		}
-    ordered_unit = {
+    random_character = {
       limit = {
-        is_army = yes
-        has_commander = yes
-        commander = {
-          is_ruler = yes
-        }
-        NOT = {
-          legion = ROOT.capital_scope.governorship.legion
-        }
+        is_ruler = yes
       }
-      max = 3
-      check_range_bounds = no
-      order_by = unit_size
-      if = {
-        limit = {
-          NOT = {
-            exists = scope:army_one
+      save_scope_as = hahayesgoodgame
+    }
+    scope:hahayesgoodgame = {
+      ordered_character_unit = {
+        #limit = {
+        #  NOT = {
+        #    legion = ROOT.capital_scope.governorship.legion
+        #  }
+        #}
+        max = 3
+        check_range_bounds = no
+        order_by = unit_size
+        if = {
+          limit = {
+            NOT = {
+              exists = scope:army_one
+            }
           }
+          save_scope_as = army_one
         }
-        save_scope_as = army_one
-      }
-      else_if = {
-        limit = {
-          NOT = {
-            exists = scope:army_two
+        else_if = {
+          limit = {
+            NOT = {
+              exists = scope:army_two
+            }
           }
+          save_scope_as = army_two
         }
-        save_scope_as = army_two
-      }
-      else_if = {
-        limit = {
-          NOT = {
-            exists = scope:army_three
+        else_if = {
+          limit = {
+            NOT = {
+              exists = scope:army_three
+            }
           }
+          save_scope_as = army_three
         }
-        save_scope_as = army_three
       }
     }
 	}
   option = { #changed my mind
     name = "commander_ruler_events.3.a"
+    trigger = {
+      exists = scope:army_one
+    }
   }
 	option = { # Ruler Becomes a Commander.
 		name = "commander_ruler_events.3.b"
@@ -292,7 +298,7 @@ commander_ruler_events.3 = {
         name = ruler_in_command
         duration = 365
       }
-      set_as_commander = scope:commander_ruler
+      set_as_commander = scope:commander_co_ruler
     }
 	}
 	option = { # Ruler Becomes a Commander.
@@ -315,7 +321,7 @@ commander_ruler_events.3 = {
         name = ruler_in_command
         duration = 365
       }
-      set_as_commander = scope:commander_ruler
+      set_as_commander = scope:commander_co_ruler
     }
 	}
   option = {
@@ -343,7 +349,7 @@ commander_ruler_events.4 = {
 }
 
 commander_ruler_events.5 = {
-	type = country_event
+  type = character_event
 	title = "commander_ruler_events.5.t"
 	desc = "commander_ruler_events.5.desc"
 	picture = elephant_battle
@@ -351,11 +357,15 @@ commander_ruler_events.5 = {
 	left_portrait = current_ruler
 
   immediate = {
-
+    if = {
+      limit = {
+        has_variable = ruler_become_commander
+      }
+      remove_variable = ruler_become_commander
+    }
   }
 
   option = {
-    name = "commander_ruler_events.5.a
+    name = "commander_ruler_events.5.a"
   }
-
 }

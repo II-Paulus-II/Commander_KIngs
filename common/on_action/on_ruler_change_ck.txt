@@ -1,6 +1,5 @@
 ﻿on_ruler_change = {
     events = {
         commander_ruler_events.4
-        commander_ruler_events.5
     }
 }
