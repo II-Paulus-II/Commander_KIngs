@@ -46,11 +46,33 @@
 		}
 	}
 
-	#Co-Consul takes command of levy
-	become_levy_commander = {
+	fix_command = {
 		potential = {
 			num_of_cities >= 1 # Required number of cities to take the decision.
-			#has_co_ruler_government = yes
+			any_character = {
+				in_command = yes
+				has_character_modifier = ruler_is_a_commander
+				is_ruler = no
+			}
+		}
+		allow = {
+			current_ruler = {
+				is_alive = yes
+			}
+		}
+		effect = {
+			trigger_event = {
+				id = commander_ruler_events.5
+			}
+		}
+		ai_will_do = {
+			base = 0 # The AI can't take the decision.
+		}
+	}
+
+	debug_ruler_test = {
+		potential = {
+			num_of_cities >= 1
 		}
 		allow = {
 			current_ruler = {
@@ -59,11 +81,12 @@
 		}
 		effect = {
 			trigger_event = {
-				id = commander_ruler_events.3
+				id = commander_ruler_events.4
 			}
 		}
+
 		ai_will_do = {
-			base = 0 # The AI can't take the decision.
+			base = 0
 		}
 	}
 }
