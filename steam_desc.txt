@@ -1,67 +1,32 @@
 [h1][b] What this mod does! [/b][/h1]
 
-Ever wanted your king to command a legion or even a navy? Well now you can!
+Ever wanted your king to command a legion? Well now you can!
 
-If the laws of a nation allow a legion to be created then a decision becomes available to appoint a Regent - (Basically your wife or  head of family) to govern your capital region. Your King is then free to command. And then a decision becomes available to return your King to power. 
+If the laws of a nation allow a legion to be created then a decision becomes available to take command of a legion.
 
-[h1][b] Third Update [/b] [/h1]
+[h1][b] Update 17th March [/b] [/h1]
 
-Succession events for making sure that the right character is heir for each of the 5 laws. These events can still be improved, but they are now very usable. 
+Consuls can now command legions
+Relinquish command bug now fixed
+If your ruler is deposed but remains in command of a legion army - decision can now remove him.
 
-Ruler in command of legions will now receive the looting event. 
+[h1][b] Mechanics and Functionality Update [/b] [/h1]
 
-New traits for order of birth - this was used for making the line of succession accurate. Some balancing here will be done soon.
+WE NO LONGER NEED TO APPOINT A REGENT FOR THE KING TO TAKE COMMAND OF A LEGION. The mod is therefore much simplified, and will almost certainly not conflict with other mods. Further, since the ruler is not being changed, it will not break events and content. 
 
-Quite a number of character interactions changed so you cannot bring your ruler to trial etc. Again a little bit more work is necessary here. 
+This mod contains 2 decisions, a few events, and a new military window. 
 
-I will be paying attention to all messages on here in the coming days so please report anything that I have missed.
+Compatible with Agamidae's mod Better UI but you must load afterwards due to the fact that I have had to edit the military GUI for this mod. 
 
-Next updates will include integration of 2 spartan kings with decisions to swap the position of the king as well as a decision to do similar for republics. Character interactions and the succession events will also be improved further. Thanks to all for playing the mod, and for commenting. 
+Other mods, if they touch the military GUI then incompatibility will be caused. However, my changes to the military GUI are not so much functionality as simply nice to have. 
 
-[h1][b] Second Update [/b] [/h1]
-
-Can no longer appoint primary heirs as regents due to an issue that I don't want to fix at the moment. Now you have a choice between a head of family and your consort.
-
-Script to safegaurd the kingdoms succession is now in place to deal with the disaster of a king or regent dying.
-
-TODO
-
-Some polishing regarding succession values so that the game correctly identifies who the script will appoint as king should the true king die in battle. 
-
-Some event Localisation and perhaps some polish in the character GUI also. 
-
-This mod though is now more or less complete. 
-
-[h1][b] First Update [/b] [/h1]
-
-Ruler change messages, stability hit now do not apply to appointing a regent.
-
-You will now be compensated for any active ideas you have. 
-
-Very minor GUI fix for one edge case of rulership. 
-
-Fixed option triggers so that you can't mess up your game if you aren't married. 
-
-TODO 
-
-1. Fix succession values so that king at war isnt a primary heir or pretender - even tho this wont matter really. 
-2. Make safe gaurds for king or regent dying. 
-3. Write better localisation for the event that allows you to choose consort or king.
-
-[h1][b] Compatibility [/b][/h1]
-
-Not compatible with my mod "bigger government" due to GUI issue. Next Bigger Government update will have this mod integrated within it.
-
-Compatible with my mod "2 Sparta kings" but load afterwards due to GUI issue. Current plans will integrate this mod into 2 Sparta kings in the next week or so. 
-
-Compatible with Agamidae's mod Better UI but you must load afterwards due to the fact that I have had to edit the GUI for this mod. 
-
-Other mods, if they touch the government GUI then incompatibility will be caused. Otherwise probably no compatibility issues. 
+Tested to work with Invictus also, but let me know if anything weird happens please. 
 
 [h1][b]Contacting Me[/b][/h1]
 
-I can be found on the imperator modding discord or the molon labe multiplayer discord as "II Paulus II"
+I can be found on the following Discords
 
+Imperator Invictus discor ----- https://discord.gg/cKjccnF8Vc
 Molon Labe MP discord link ----- https://discord.gg/QvBXKhp3jA
 Imperator Modding discord link ---- https://discord.gg/dFVQHAPHFy
 
@@ -74,3 +39,5 @@ Thanks To Crazy Zombie once again for the trait icons.
 Thanks also to Dustin on Molon Labe for some very nice localisation for the events.
 
 Modding discord as always, cool dudes all!
+
+Another thanks. An individual who has not given explicit permission to be named did demonstrate that there was another non-regent-appointing workaround which has simplified this mod.
