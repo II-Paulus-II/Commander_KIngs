@@ -7,6 +7,10 @@
 			OR = {
 				has_law = work_for_the_best # Royal Army.
 				has_law = standing_army_law # Professional Army.
+				has_law = republican_recruitment_2
+				has_law = republican_recruitment_4
+				has_law = punic_reforms
+				has_law = marian_reforms
 			}
 		}
 		allow = {
